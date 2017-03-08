@@ -19,7 +19,7 @@ export default function (props, ref, key) {
                     className={'slide' + (_.get(props, 'data.reveal.indexToOpen', 0) === 7 ? ' disable' : '')}
                     clickable
                     delay={400}
-                    targetIndex={2}
+                    targetIndex={1}
                     onSelect={function (target) {
                         this.updateScreenData({
                             key: 'attempt',
