@@ -28,34 +28,34 @@ import FlipScreen from './components/flip_screen';
 
 import QuitScreen from 'shared/components/quit_screen/0.1';
 
-var Printmaster = (
+skoash.start(
     <skoash.Game
         config={config}
-        screens={{
-            0: iOSScreen,
-            1: TitleScreen,
-            2: InfoTinyPatternsScreen,
-            3: InfoDiscoverScreen,
-            4: InfoArchScreen,
-            5: InfoLoopsScreen,
-            6: InfoWhorlScreen,
-            7: InfoDoubleLoopScreen,
-            8: InfoIdScreen,
-            9: IdentifyScreen,
-            10: CarouselScreen,
-            11: InfoLetsDustScreen,
-            12: InfoNeedScreen,
-            13: InfoStep1Screen,
-            14: InfoStep2Screen,
-            15: InfoStep3Screen,
-            16: InfoStep4Screen,
-            17: InfoStep5Screen,
-            18: InfoStep6Screen,
-            19: InfoStep7Screen,
-            20: InfoEverybodyScreen,
-            21: InfoFurtherScreen,
-            22: FlipScreen,
-        }}
+        screens={[
+            iOSScreen,
+            TitleScreen,
+            InfoTinyPatternsScreen,
+            InfoDiscoverScreen,
+            InfoArchScreen,
+            InfoLoopsScreen,
+            InfoWhorlScreen,
+            InfoDoubleLoopScreen,
+            InfoIdScreen,
+            IdentifyScreen,
+            CarouselScreen,
+            InfoLetsDustScreen,
+            InfoNeedScreen,
+            InfoStep1Screen,
+            InfoStep2Screen,
+            InfoStep3Screen,
+            InfoStep4Screen,
+            InfoStep5Screen,
+            InfoStep6Screen,
+            InfoStep7Screen,
+            InfoEverybodyScreen,
+            InfoFurtherScreen,
+            FlipScreen,
+        ]}
         menus={{
             quit: QuitScreen,
         }}
@@ -91,7 +91,5 @@ var Printmaster = (
         ]}
     />
 );
-
-skoash.start(Printmaster);
 
 if (module.hot) module.hot.accept();

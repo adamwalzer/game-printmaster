@@ -40,7 +40,7 @@ export default function (props, ref, key) {
                     }
                 />
                 <Target
-                    attempt={_.get(props, 'data.attempt.target.ref', null)}
+                    attempt={_.get(props, 'data.attempt.target.props.message', null)}
                     onUpdateState={function (correct) {
                         let data = {
                             attempt: {
@@ -121,17 +121,18 @@ export default function (props, ref, key) {
                     dataTarget="score"
                     completeDelay={1000}
                     max={_.get(props, 'data.target.amount', null)}
-                    completeOnStart
+                    complete
                     resetOnComplete
                     multipleCompletes
                     onComplete={function () {
+                        let indexToOpen = _.get(props, 'data.reveal.indexToOpen', -1) + 1;
                         this.updateScreenData({
                             data: {
                                 score: {
-                                    correct: 0
+                                    correct: indexToOpen === 8 ? undefined : 0
                                 },
                                 reveal: {
-                                    indexToOpen: _.get(props, 'data.reveal.indexToOpen', -1) + 1
+                                    indexToOpen
                                 }
                             }
                         });
