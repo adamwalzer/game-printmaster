@@ -76,7 +76,7 @@
 
             &.LEAVE,
             &.LEAVE ~ div {
-                transition: transform 1s;
+                transition: transform 1s .5s;
             }
 
             &.LEAVE {
